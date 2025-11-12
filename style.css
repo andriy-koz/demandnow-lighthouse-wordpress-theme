@@ -2,7 +2,7 @@
 Theme Name: DemandNow.ai Theme with Lighthouse improvements
 Description: A modern, responsive landing page theme for DemandNow.ai - AI-Powered Growth Marketing with Lighthouse improvements
 Author: DemandNow.ai
-Version: 2.5
+Version: 2.6
 License: GPL v2 or later
 Text Domain: demandnow-theme
 */
@@ -1015,7 +1015,7 @@ gap: 16px;
 
 /* Mobile Menu Button */
 .mobile-menu-toggle {
-display: none;
+display: none !important;
 background: none;
 border: none;
 cursor: pointer;
@@ -1127,7 +1127,7 @@ border: none;
 
 @media (max-width: 900px) {
 .mobile-menu-toggle {
-display: block;
+display: block !important;
 }
 
 header .nav-links {
