@@ -20,6 +20,7 @@
 <form method="POST" action="">
 <input type="hidden" name="source_url" value="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>">
 <input type="hidden" name="custom_lead_form" value="1">
+<input type="hidden" name="form_type" value="contact">
 <div class="form-row">
 <div class="form-group">
 <label class="screen-reader-text" for="first_name">First Name</label>

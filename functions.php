@@ -219,12 +219,15 @@ add_action('init', 'demandnow_fix_blog_rewrite');
 add_action('init', function() {
     if (isset($_POST['custom_lead_form']) && !empty($_POST['email'])) {
         // Sanitize input data
+        $form_type = sanitize_text_field($_POST['form_type'] ?? 'contact');
+
         $lead_data = array(
             'first_name' => sanitize_text_field($_POST['first_name'] ?? ''),
             'last_name' => sanitize_text_field($_POST['last_name'] ?? ''),
             'email' => sanitize_email($_POST['email']),
             'company' => sanitize_text_field($_POST['company'] ?? ''),
             'message' => sanitize_textarea_field($_POST['message'] ?? ''),
+            'form_type' => $form_type,
             'source' => sanitize_text_field($_POST['source_url'] ?? $_SERVER['HTTP_REFERER']),
             'date' => current_time('mysql')
         );
@@ -235,12 +238,14 @@ add_action('init', function() {
         update_option('custom_leads_database', $leads);
 
         // Optional: Send email notification
+        $email_subject = ($form_type === 'pilot') ? 'New Pilot Application' : 'New Website Lead';
+
         $message = "New lead submission:\n\n";
         foreach($lead_data as $key => $value) {
             $message .= ucfirst(str_replace('_', ' ', $key)) . ": $value\n";
         }
-        wp_mail('sales@demandnow.ai', 'New Website Lead', $message);
-        
+        wp_mail('sales@demandnow.ai', $email_subject, $message);
+
         // Redirect to prevent form resubmission
         $redirect_url = add_query_arg('form_success', '1', $_SERVER['REQUEST_URI']);
         wp_redirect($redirect_url);
@@ -253,13 +258,14 @@ add_action('admin_menu', function() {
     add_menu_page('Leads', 'Leads', 'manage_options', 'custom-leads', function() {
         $leads = get_option('custom_leads_database', array());
         echo '<div class="wrap"><h1>Leads</h1>';
-        
+
         if (empty($leads)) {
             echo '<p>No leads found</p>';
         } else {
             echo '<table class="wp-list-table widefat fixed striped">';
             echo '<thead><tr>
                 <th>Date</th>
+                <th>Type</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
@@ -267,8 +273,10 @@ add_action('admin_menu', function() {
                 <th>Source</th>
             </tr></thead>';
             foreach (array_reverse($leads) as $lead) {
+                $form_type = isset($lead['form_type']) ? ucfirst($lead['form_type']) : 'Contact';
                 echo "<tr>
                     <td>{$lead['date']}</td>
+                    <td><strong>{$form_type}</strong></td>
                     <td>{$lead['first_name']}</td>
                     <td>{$lead['last_name']}</td>
                     <td>{$lead['email']}</td>
