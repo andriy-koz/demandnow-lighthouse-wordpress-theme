@@ -14,14 +14,14 @@ get_header();
 Pilot Program
 </div>
 <h1 style="font-size: 2em;">Join Our Exclusive Pilot Testing Program</h1>
-<p class="hero-subtitle">Be among the first to experience our next-generation AI-powered marketing platform. Help shape the future while getting early access to cutting-edge features.</p>
+<p class="hero-subtitle pilot-hero-subtitle">Be among the first to experience our next-generation AI-powered marketing platform. Help shape the future while getting early access to cutting-edge features.</p>
 </div> <!-- /.hero-content -->
 </section> <!-- /.hero -->
 
 <!-- Pilot Signup Form Section -->
-<section class="services" style="padding: 80px 0;">
-<div class="services-content">
-<div class="contact-form" style="max-width: 600px; margin: 0 auto;">
+<section class="pilot-form-section">
+<div class="pilot-form-content">
+<div class="pilot-signup-form">
 <h3>Sign Up for Pilot Testing</h3>
 <?php if (isset($_GET['form_success']) && $_GET['form_success'] == '1'): ?>
 <div class="form-success-message" role="alert" aria-live="assertive">

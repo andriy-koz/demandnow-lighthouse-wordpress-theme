@@ -2,7 +2,7 @@
 Theme Name: DemandNow.ai Theme with Lighthouse improvements
 Description: A modern, responsive landing page theme for DemandNow.ai - AI-Powered Growth Marketing with Lighthouse improvements
 Author: DemandNow.ai
-Version: 2.4
+Version: 2.5
 License: GPL v2 or later
 Text Domain: demandnow-theme
 */
@@ -1281,6 +1281,29 @@ margin-bottom: 24px;
 }
 }
 
+/* Mobile styles for pilot signup form */
+@media (max-width: 768px) {
+.pilot-form-section {
+padding: 60px 0;
+}
+
+.pilot-form-content {
+padding: 0 20px;
+}
+
+.pilot-signup-form {
+padding: 32px 24px;
+max-width: 100%;
+width: calc(100% - 40px);
+margin: 0 auto;
+}
+
+.pilot-signup-form h3 {
+font-size: 20px;
+margin-bottom: 20px;
+}
+}
+
 @media (max-width: 480px) {
 /* Mobile Navigation - Force display */
 .mobile-menu-toggle {
@@ -1291,6 +1314,19 @@ display: block !important;
 .company-logos {
 grid-template-columns: 1fr;
 gap: 12px;
+}
+
+/* Pilot signup form mobile adjustments */
+.pilot-signup-form {
+padding: 24px 20px;
+max-width: 100%;
+width: calc(100% - 32px);
+margin: 0 auto;
+}
+
+.pilot-signup-form .submit-button {
+padding: 14px 24px;
+font-size: 15px;
 }
 
 header .nav-links {
@@ -1368,6 +1404,144 @@ border-radius: 4px;
 /* Add subtle border for debugging visibility */
 border: 1px solid rgba(0,0,0,0.1) !important;
 }
+}
+
+/* Pilot Signup Page Styles */
+
+/* Remove bottom margin from pilot page hero subtitle */
+.pilot-hero-subtitle {
+margin-bottom: 0;
+}
+
+/* Pilot form section - styled like stats section */
+.pilot-form-section {
+padding: 80px 0;
+background: var(--gray-50);
+}
+
+.pilot-form-content {
+max-width: 1280px;
+margin: 0 auto;
+padding: 0 32px;
+}
+
+/* Pilot signup form - styled like stat cards */
+.pilot-signup-form {
+max-width: 600px;
+width: 100%;
+margin: 0 auto;
+background: var(--white);
+padding: 40px 32px;
+border-radius: 12px;
+border: 1px solid var(--gray-200);
+transition: all 0.2s ease;
+box-sizing: border-box;
+}
+
+/* Ensure form element respects container width */
+.pilot-signup-form form {
+width: 100%;
+max-width: 100%;
+}
+
+/* Ensure form-row respects container width */
+.pilot-signup-form .form-row {
+width: 100%;
+max-width: 100%;
+box-sizing: border-box;
+}
+
+/* Ensure form-group respects container width */
+.pilot-signup-form .form-group {
+width: 100%;
+max-width: 100%;
+box-sizing: border-box;
+}
+
+.pilot-signup-form:hover {
+box-shadow: var(--shadow-lg);
+border-color: var(--gray-300);
+}
+
+.pilot-signup-form h3 {
+font-size: 24px;
+font-weight: 700;
+margin-bottom: 24px;
+color: var(--black);
+letter-spacing: -0.025em;
+text-align: center;
+}
+
+/* Form inputs for white background - with higher specificity */
+.pilot-signup-form .form-group input,
+.pilot-signup-form .form-group textarea {
+width: 100% !important;
+padding: 12px 16px !important;
+border: 1px solid var(--gray-300) !important;
+border-radius: 8px !important;
+background: var(--gray-50) !important;
+color: var(--gray-900) !important;
+font-family: inherit !important;
+font-size: 14px !important;
+transition: all 0.2s ease !important;
+}
+
+.pilot-signup-form .form-group input::placeholder,
+.pilot-signup-form .form-group textarea::placeholder {
+color: var(--gray-500) !important;
+}
+
+.pilot-signup-form .form-group input:focus,
+.pilot-signup-form .form-group textarea:focus {
+outline: none !important;
+border-color: var(--gray-600) !important;
+background: var(--white) !important;
+box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Button styling to match home page CTA */
+.pilot-signup-form .submit-button {
+background: var(--black);
+color: var(--white);
+padding: 16px 32px;
+border: none;
+border-radius: 10px;
+font-weight: 600;
+font-size: 16px;
+cursor: pointer;
+transition: all 0.2s ease;
+width: 100%;
+}
+
+.pilot-signup-form .submit-button:hover {
+background: var(--gray-800);
+transform: translateY(-1px);
+}
+
+/* Success message styling for white background */
+.pilot-signup-form .form-success-message {
+background: var(--white);
+padding: 32px;
+border-radius: 16px;
+border: 2px solid var(--emerald-500);
+text-align: center;
+}
+
+.pilot-signup-form .form-success-message h4 {
+font-size: 20px;
+font-weight: 700;
+color: var(--black);
+letter-spacing: -0.025em;
+margin: 0;
+}
+
+.pilot-signup-form .form-success-message p {
+color: var(--gray-600);
+line-height: 1.6;
+margin: 0;
+max-width: 400px;
+margin-left: auto;
+margin-right: auto;
 }
 
 /* Additional mobile responsive fixes */
