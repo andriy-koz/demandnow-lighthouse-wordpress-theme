@@ -11,10 +11,17 @@ get_header();
 <div class="hero-content">
 <div class="hero-badge">
 <span>⚡</span>
-Pilot Program
+AI Sales Pilot
 </div>
-<h1 style="font-size: 2em;">Join Our Exclusive Pilot Testing Program</h1>
-<p class="hero-subtitle pilot-hero-subtitle">Be among the first to experience our next-generation AI-powered marketing platform. Help shape the future while getting early access to cutting-edge features.</p>
+<h1 style="font-size: 2em;">Stop Guessing. Start Selling. Join the Exclusive AI Sales Pilot.</h1>
+<p class="hero-subtitle pilot-hero-subtitle">Tired of hours spent researching and writing?</p>
+<p class="hero-subtitle pilot-hero-subtitle">Be among the first to experience our next-generation AI sales tool. We automate the tedious parts of your day, instantly providing:</p>
+<ul class="service-features" style="max-width: 700px; margin: 24px auto;">
+<li><strong>Deep Prospect Research:</strong> Get laser-focused insights on your target accounts.</li>
+<li><strong>Personalized Email Generation:</strong> Create highly-converting, hyper-personalized emails in seconds.</li>
+<li><strong>Custom Content Generation:</strong> Generate engaging content and talking points tailored to your prospect.</li>
+</ul>
+<p class="hero-subtitle pilot-hero-subtitle">Help shape the future of sales while getting early access to cutting-edge features that guarantee more conversions and bigger deals.</p>
 </div> <!-- /.hero-content -->
 </section> <!-- /.hero -->
 
@@ -22,7 +29,7 @@ Pilot Program
 <section class="pilot-form-section">
 <div class="pilot-form-content">
 <div class="pilot-signup-form">
-<h3>Sign Up for Pilot Testing</h3>
+<h3>Join the AI Sales Pilot</h3>
 <?php if (isset($_GET['form_success']) && $_GET['form_success'] == '1'): ?>
 <div class="form-success-message" role="alert" aria-live="assertive">
 <div class="success-content">
