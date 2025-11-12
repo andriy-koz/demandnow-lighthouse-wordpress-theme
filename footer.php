@@ -90,7 +90,7 @@ header{z-index:1000}
 .case-study-button:hover{background:#eff6ff}
 
 /* ===== Mobile nav (Clay-style accordion) ===== */
-@media (max-width:768px){
+@media (max-width:900px){
   .mobile-nav-menu{padding:16px;background:#fff}
   .mobile-nav-menu .cta-button{width:100%;margin-top:16px;text-align:center}
   .mobile-nav-overlay{background:rgba(0,0,0,.25)}
