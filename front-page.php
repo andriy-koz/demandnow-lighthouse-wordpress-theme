@@ -13,7 +13,7 @@ AI-Powered Growth Engine
 <p class="hero-subtitle">We help growth-stage companies scale from 6 to 7 figures with content that converts browsers into buyers automatically.</p>
 <div class="hero-cta-group">
   <a href="#contact" class="hero-cta-primary">Get a free strategy call</a>
-  <a href="#results" class="hero-cta-secondary">See Case Studies</a>
+  <a href="<?php echo home_url(); ?>/case-studies/" class="hero-cta-secondary">See Case Studies</a>
 </div>
 </div> <!-- /.hero-content -->
 </section> <!-- /.hero -->
