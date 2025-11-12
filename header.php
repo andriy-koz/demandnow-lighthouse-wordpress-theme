@@ -215,6 +215,7 @@ if ( is_singular() ) {
       <li><a href="<?php echo home_url(); ?>/faq/">FAQ</a></li>
       <li><a href="<?php echo home_url(); ?>#pricing">Pricing</a></li>
       <li><a href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Blog</a></li>
+      <li><a href="<?php echo home_url(); ?>/pilot-signup/">Pilot Signup</a></li>
       <li><a href="<?php echo home_url(); ?>#contact">Contact</a></li>
     </ul>
 
@@ -336,6 +337,7 @@ if ( is_singular() ) {
     </li>
     <li><a class="m-row" href="<?php echo home_url(); ?>/#pricing">Pricing</a></li>
     <li><a class="m-row" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Blog</a></li>
+    <li><a class="m-row" href="<?php echo home_url(); ?>/pilot-signup/">Pilot Signup</a></li>
   </ul>
   <a href="<?php echo home_url(); ?>#contact" class="cta-button">Get Started</a>
 </div>
